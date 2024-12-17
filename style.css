@@ -1,5 +1,6 @@
 :root {
     --light-border: #E5E7EB;
+    --tree-green: #596D48
 }
 
 @font-face {
@@ -53,9 +54,15 @@ div#form-container{
 
 button#submit-form {
     align-self: flex-start;
-    padding: 5px;
-    margin-left: 18px;
+    margin-left: 32px;
     margin-bottom: 12px;
+    border-radius: 6px;
+    background-color:var(--tree-green) ;
+    color: white;
+    font-weight: bold;
+    padding: .75em 3em;
+    border: none;
+    box-shadow: 3px 3px 2px var(--light-border);
 }
 
 form#sign-up-form {
@@ -66,19 +73,23 @@ form#sign-up-form {
 }
 div.input-label{
     flex-direction: column;
-    width: 40%;
+    width: 45%;
     align-items: flex-start;
     gap: 2px;
 }
 
 main > * {
-    padding-left: 18px;
+    padding-left: 32px;
+}
+
+main > p {
+    max-width: 400px;
 }
 
 div.greybox {
     background-color: rgb(0,0,0,0.5);
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     margin-top: 40%;
     padding: 10px;
 
@@ -86,12 +97,12 @@ div.greybox {
 
 h1.odintext{
     font-family: Norse-Bold, system-ui;
-    font-size: 64px;
+    font-size: 72px;
     margin: 0;
 }
 
 img.icon{
-    height: 100px;
+    height: 90px;
 }
 
 p {
@@ -127,7 +138,17 @@ input {
     border-radius: 3px;
 }
 
-#left-image a:visited {
+#left-image a:link, #left-image a:visited  {
     color: white;
+}
+
+main a:link, main a:visited {
+    color: var(--tree-green);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button + p{
+    font-weight: normal;
 }
 
