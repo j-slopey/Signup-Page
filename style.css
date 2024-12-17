@@ -1,19 +1,33 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./Norse-Bold.otf);
+}
+
+body * {
+    display: flex;
+    margin: 0;
+}
+
 body{
     display: flex;
     justify-content: center;
     align-items: stretch;
     background-color: whitesmoke;
+    margin: 0;
+    height: 100vh;
 }
 
 div#left-image{
     background-image: url("sideimage.jpg");
-    width: 400px;
+    flex-direction: column;
+    justify-content: space-between;
     height: 750px;
+    width: 400px;
     flex: 0 0 auto;
+    color: white;
 }
 
 main {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
@@ -27,8 +41,8 @@ div#form-container{
 
 button#submit-form {
     align-self: flex-start;
-    padding: 5px 5px ;
-    margin-left: 13px;
+    padding: 5px;
+    margin-left: 18px;
 }
 
 form#sign-up-form {
@@ -38,7 +52,6 @@ form#sign-up-form {
     gap: 8px;
 }
 div.input-label{
-    display: flex;
     flex-direction: column;
     width: 40%;
 
@@ -46,4 +59,28 @@ div.input-label{
 
 main > * {
     padding-left: 18px;
+}
+
+div.greybox {
+    background-color: rgb(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    margin-top: 40%;
+    padding: 10px;
+
+}
+
+h1.odintext{
+    font-family: Norse-Bold, system-ui;
+    font-size: 64px;
+    margin: 0;
+}
+
+img.icon{
+    height: 100px;
+}
+
+.credit {
+    align-self: center;
+
 }
