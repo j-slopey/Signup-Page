@@ -101,9 +101,10 @@ p {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: dimgrey;
+    margin-bottom: 8px;
 }
 
 .credit {
@@ -114,10 +115,11 @@ h2 {
 
 label {
     text-transform: uppercase;
-    font-family: monospace;
+    font-family: "Lucida Grande",monospace;
     font-weight: bolder;
-    font-size: 10px;
-    color: darkgray;
+    font-size: 9px;
+    color: dimgrey;
+    letter-spacing: 0.05em;
 }
 
 input {
