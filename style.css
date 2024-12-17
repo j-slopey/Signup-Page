@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-color: whitesmoke;
+}
+
+div#left-image{
+    background-image: url("sideimage.jpg");
+    width: 400px;
+    height: 750px;
+    flex: 0 0 auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    max-width: 600px;
+}
+
+div#form-container{
+    background-color: white;
+}
+
+button {
+    align-self: flex-start;
+}
