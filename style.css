@@ -1,3 +1,7 @@
+:root {
+    --light-border: #E5E7EB;
+}
+
 @font-face {
     font-family: Norse-Bold;
     src: url(./Norse-Bold.otf);
@@ -6,15 +10,16 @@
 body * {
     display: flex;
     margin: 0;
+    font-family: system-ui;
+
 }
 
 body{
     display: flex;
     justify-content: center;
     align-items: stretch;
-    background-color: whitesmoke;
+    background-color: black;
     margin: 0;
-    height: 100vh;
 }
 
 div#left-image{
@@ -32,29 +37,38 @@ main {
     justify-content: center;
     flex: 1;
     max-width: 600px;
+    background-color: whitesmoke;
+
 }
 
 div#form-container{
     background-color: white;
     flex-wrap: wrap;
+    margin: 24px 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 8px;
+    box-shadow: 0 4px 2px var(--light-border);
 }
 
 button#submit-form {
     align-self: flex-start;
     padding: 5px;
     margin-left: 18px;
+    margin-bottom: 12px;
 }
 
 form#sign-up-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 8px;
+    gap: 12px;
 }
 div.input-label{
     flex-direction: column;
     width: 40%;
-
+    align-items: flex-start;
+    gap: 2px;
 }
 
 main > * {
@@ -80,7 +94,38 @@ img.icon{
     height: 100px;
 }
 
+p {
+    font-weight: bold;
+    white-space: pre-wrap;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: dimgrey;
+}
+
 .credit {
     align-self: center;
-
+    font-size: 12px;
+    font-weight: lighter;
 }
+
+label {
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 10px;
+    color: darkgray;
+}
+
+input {
+    border: var(--light-border) 1px solid;
+    border-radius: 3px;
+}
+
+#left-image a:visited {
+    color: white;
+}
+
