@@ -17,9 +17,39 @@
     <p>You <em>know</em> you want to.</p>
     <div id="form-container">
         <h2>Let's Do This</h2>
-        <form id="sign-up-form"></form>
+        <form id="sign-up-form">
+            <div class="input-label">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required>
+            </div>
+
+            <div class="input-label">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required>
+            </div>
+
+            <div class="input-label">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="input-label">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" name="phone-number" id="phone-number" required>
+            </div>
+
+            <div class="input-label">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+
+            <div class="input-label">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" required>
+            </div>
+        </form>
     </div>
-    <button>Submit</button>
+    <button id="submit-form">Submit</button>
     <p>Already have an account? <a href="">Log In</a></p>
 </main>
 </body>

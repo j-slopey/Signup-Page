@@ -22,8 +22,28 @@ main {
 
 div#form-container{
     background-color: white;
+    flex-wrap: wrap;
 }
 
-button {
+button#submit-form {
     align-self: flex-start;
+    padding: 5px 5px ;
+    margin-left: 13px;
+}
+
+form#sign-up-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+}
+div.input-label{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+}
+
+main > * {
+    padding-left: 18px;
 }
