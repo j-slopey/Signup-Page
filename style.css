@@ -20,7 +20,7 @@ body{
     justify-content: center;
     align-items: stretch;
     background-color: black;
-    margin: 0;
+    margin: 0 20%
 }
 
 div#left-image{
@@ -33,28 +33,24 @@ div#left-image{
     color: white;
 }
 
-main {
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    max-width: 600px;
-    background-color: whitesmoke;
-
-}
-
-div#form-container{
+form div.fields{
+    justify-content: space-between;
     background-color: white;
     flex-wrap: wrap;
     margin: 24px 0;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 60px;
     gap: 8px;
     box-shadow: 0 4px 2px var(--light-border);
 }
 
+form > * {
+    padding: 0 24px;
+}
+
 button#submit-form {
     align-self: flex-start;
-    margin-left: 32px;
     margin-bottom: 12px;
     border-radius: 6px;
     background-color:var(--tree-green) ;
@@ -62,6 +58,7 @@ button#submit-form {
     font-weight: bold;
     padding: .75em 3em;
     border: none;
+    cursor: pointer;
     box-shadow: 3px 3px 2px var(--light-border);
 }
 
@@ -69,21 +66,10 @@ form#sign-up-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-left: 0;
+    background-color: whitesmoke;
     gap: 12px;
-}
-div.input-label{
-    flex-direction: column;
-    width: 45%;
-    align-items: flex-start;
-    gap: 2px;
-}
-
-main > * {
-    padding-left: 32px;
-}
-
-main > p {
-    max-width: 400px;
+    align-content: center;
 }
 
 div.greybox {
@@ -116,12 +102,20 @@ h2 {
     font-weight: bold;
     color: dimgrey;
     margin-bottom: 8px;
+    width: 100%;
 }
 
 .credit {
     align-self: center;
     font-size: 12px;
     font-weight: lighter;
+}
+
+div.input-label{
+    flex-direction: column;
+    width: 45%;
+    align-items: stretch;
+    gap: 2px;
 }
 
 label {
@@ -136,13 +130,30 @@ label {
 input {
     border: var(--light-border) 1px solid;
     border-radius: 3px;
+    max-width: 200px;
 }
+
+input:invalid {
+    border: red 1px solid;
+
+}
+input:focus {
+    outline: none;
+    border: royalblue 1px solid;
+    box-shadow: 2px 2px 3px var(--light-border);
+}
+
 
 #left-image a:link, #left-image a:visited  {
     color: white;
+    align-items: flex-end;
 }
 
-main a:link, main a:visited {
+.greybox a:link{
+    text-decoration: none;
+}
+
+form a:link, form a:visited {
     color: var(--tree-green);
     font-weight: bold;
     text-decoration: none;
@@ -150,5 +161,9 @@ main a:link, main a:visited {
 
 button + p{
     font-weight: normal;
+}
+
+.submit-form {
+    flex-direction: column;
 }
 

@@ -4,56 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>Sign Up</title>
 </head>
 <body>
 <div id="left-image">
     <div class="greybox">
-        <img src="odin-icon.png" class="icon">
-        <h1 class="odintext">ODIN</h1>
+        <a href="https://www.theodinproject.com/" target="_blank">
+            <img src="odin-icon.png" class="icon">
+            <h1 class="odintext">ODIN</h1>
+        </a>
     </div>
-    <p class="credit">Photo by <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a> </p>
+    <p class="credit">Photo by <a
+            href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA" target="_blank">Halie West</a> on <a
+            href="https://unsplash.com/" target="_blank">Unsplash</a></p>
 </div>
-<main>
-    <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+<form id="sign-up-form">
+    <p>This is not a real online service! You know you need something like this in your life to help you realize your
+        deepest dreams.</p>
     <p>You <em>know</em> you want to.</p>
-    <div id="form-container">
+    <div class="fields">
         <h2>Let's Do This!</h2>
-        <form id="sign-up-form">
-            <div class="input-label">
-                <label for="first-name">First Name</label>
-                <input type="text" name="first-name" id="first-name" required>
-            </div>
+        <div class="input-label">
+            <label for="first-name">First Name*</label>
+            <input type="text" name="first-name" id="first-name" required>
+        </div>
 
-            <div class="input-label">
-                <label for="last-name">Last Name</label>
-                <input type="text" name="last-name" id="last-name" required>
-            </div>
+        <div class="input-label">
+            <label for="last-name">Last Name*</label>
+            <input type="text" name="last-name" id="last-name" required>
+        </div>
 
-            <div class="input-label">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-            </div>
+        <div class="input-label">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
 
-            <div class="input-label">
-                <label for="phone-number">Phone Number</label>
-                <input type="tel" name="phone-number" id="phone-number" required>
-            </div>
+        <div class="input-label">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" name="phone-number" id="phone-number" pattern="\d{3}-?\d{3}-?\d{4}">
+        </div>
 
-            <div class="input-label">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" required>
-            </div>
+        <div class="input-label">
+            <label for="password">Password*</label>
+            <input type="password" name="password" id="password" pattern="*{8}" minlength="8" required>
+        </div>
 
-            <div class="input-label">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" name="confirm-password" id="confirm-password" required>
-            </div>
-        </form>
+        <div class="input-label">
+            <label for="confirm-password">Confirm Password*</label>
+            <input type="password" name="confirm-password" id="confirm-password" minlength="8" required>
+        </div>
     </div>
-    <button id="submit-form">Create Account</button>
-    <p>Already have an account? <a href="">Log In</a></p>
-</main>
+    <div class="submit-form">
+        <button id="submit-form">Create Account</button>
+        <p>Already have an account? <a href="">Log In</a></p>
+    </div>
+</form>
 </body>
 </html>
